@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/demo_data.dart';
 import '../models.dart';
+import '../screens/project_screen.dart';
 import 'common_widgets.dart';
 
 class ProjectCard extends StatelessWidget {
@@ -11,8 +12,11 @@ class ProjectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Panel(
     padding: EdgeInsets.zero,
-    // Подробная страница будет добавлена следующим этапом.
-    onTap: null,
+    onTap: () => Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => ProjectScreen(data: data, project: project),
+      ),
+    ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

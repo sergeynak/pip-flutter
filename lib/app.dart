@@ -4,6 +4,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'data/demo_data.dart';
 import 'screens/home_screen.dart';
 import 'screens/navigation.dart';
+import 'screens/portfolio_screen.dart';
 import 'screens/services_screen.dart';
 import 'widgets/common_widgets.dart';
 
@@ -126,7 +127,7 @@ class _StudioShellState extends State<StudioShell> {
     _pages = [
       HomeScreen(data: widget.data, onTab: (i) => setState(() => _index = i)),
       ServicesScreen(data: widget.data),
-      const Center(child: Text('Портфолио — раздел в разработке')),
+      PortfolioScreen(data: widget.data),
       const Center(child: Text('Блог — раздел в разработке')),
       const Center(child: Text('Контакты — раздел в разработке')),
     ];
