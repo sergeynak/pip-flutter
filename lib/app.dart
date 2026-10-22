@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'data/demo_data.dart';
+import 'screens/blog_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/navigation.dart';
 import 'screens/portfolio_screen.dart';
@@ -128,7 +129,7 @@ class _StudioShellState extends State<StudioShell> {
       HomeScreen(data: widget.data, onTab: (i) => setState(() => _index = i)),
       ServicesScreen(data: widget.data),
       PortfolioScreen(data: widget.data),
-      const Center(child: Text('Блог — раздел в разработке')),
+      BlogScreen(data: widget.data),
       const Center(child: Text('Контакты — раздел в разработке')),
     ];
   }
