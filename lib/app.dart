@@ -3,6 +3,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'data/demo_data.dart';
 import 'screens/blog_screen.dart';
+import 'screens/contacts_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/navigation.dart';
 import 'screens/portfolio_screen.dart';
@@ -130,7 +131,7 @@ class _StudioShellState extends State<StudioShell> {
       ServicesScreen(data: widget.data),
       PortfolioScreen(data: widget.data),
       BlogScreen(data: widget.data),
-      const Center(child: Text('Контакты — раздел в разработке')),
+      ContactsScreen(data: widget.data),
     ];
   }
 
