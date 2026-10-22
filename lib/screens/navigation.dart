@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
 import '../data/demo_data.dart';
+import 'brief_screen.dart';
 
-// Форма заявки будет добавлена отдельным этапом.
+// Открываем форму из любой кнопки и передаём ей текущий источник данных.
 void openBrief(BuildContext context, DemoData data, {String? serviceTitle}) {
-  ScaffoldMessenger.of(context).showSnackBar(
-    const SnackBar(content: Text('Форма заявки пока в разработке.')),
+  Navigator.of(context).push(
+    MaterialPageRoute<void>(
+      builder: (_) =>
+          BriefScreen(data: data, initialServiceTitle: serviceTitle),
+    ),
   );
 }
