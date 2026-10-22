@@ -1,6 +1,6 @@
 # Pip
 
-Flutter-макет приложения студии Pip: экраны, переходы и локальные примеры данных. API не подключён. Для него оставлен только пустой файл `lib/api/api_service.dart` с комментарием `TODO`.
+Flutter-макет приложения студии Pip: экраны, переходы и локальные примеры данных. API не подключён. 
 
 ## Что работает
 
@@ -22,31 +22,3 @@ flutter pub get
 flutter run -d chrome
 ```
 
-Дополнительных настроек для просмотра макета нет.
-
-## Где искать код
-
-| Путь | Назначение |
-| --- | --- |
-| `lib/main.dart` | Запускает `PipApp(data: DemoData())` |
-| `lib/app.dart` | Оформление и вкладки |
-| `lib/screens/` | Отдельные экраны и действия пользователя |
-| `lib/data/demo_data.dart` | Локальные услуги, проекты, статьи и настройки формы |
-| `lib/models.dart` | Классы данных |
-
-Общие элементы интерфейса находятся в `lib/widgets/`. Комментарии написаны по-русски. Пустой `lib/api/api_service.dart` нигде не используется.
-
-[Краткое объяснение для новичка](docs/architecture.md) · [Состояние подключения API](docs/api-integration.md).
-
-## Проверки
-
-```sh
-dart format --output=none --set-exit-if-changed lib test
-flutter analyze
-flutter test
-flutter build web --release
-```
-
-Проверки интерфейса используют локальные данные. Нативные сборки и публикация в магазинах требуют отдельной настройки и проверки: для Android нужны Android SDK и JDK, для iOS — macOS и Xcode.
-
-История по этапам: [что добавлено в каждом коммите](docs/development-stages.md).
