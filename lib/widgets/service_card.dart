@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../data/demo_data.dart';
 import '../models.dart';
+import '../screens/service_screen.dart';
 import 'common_widgets.dart';
 
 class ServiceCard extends StatelessWidget {
@@ -18,8 +19,11 @@ class ServiceCard extends StatelessWidget {
   final bool compact;
   @override
   Widget build(BuildContext context) => Panel(
-    // Подробная страница будет добавлена следующим этапом.
-    onTap: null,
+    onTap: () => Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => ServiceScreen(service: service, data: data),
+      ),
+    ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
